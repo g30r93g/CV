@@ -28,14 +28,14 @@ cv:
           - 'Achievements: Maximum grade for A-Level Computer Science coursework.'
     experience:
       - company: Kane FM
-        position: Senior Software Developer
+        position: Lead Software Developer
         location: Remote & Guildford, UK
         start_date: 2023-11
         end_date: 'present'
         highlights:
           - Created WordPress plugins for scheduling of radio shows, revenue collection and day-to-day station management.
-          - Implemented new branding guidelines in a custom WordPress theme developed in 12 weeks.
-          - Leading meetings with stakeholders regarding feedback on new features, plugins and platforms.
+          # - Implemented new branding guidelines in a custom WordPress theme developed in 12 weeks.
+          - Leading meetings with various teams collecting requirements and discussing feedback on new features, plugins and platforms.
           - 'Tools Used: GitHub, GitHub Actions, Docker, Javascript, Node.js, PHP, Tailwind.css, WordPress'
       - company: Surrey Students' Union
         position: Digital Experience Assistant
@@ -121,7 +121,7 @@ cv:
           - Engaged over 150 students at the University of Surrey over the 2023/24 academic year.
           - Established club branding and engaging social media presence.
           - Designed and delivered new custom race suits for club members.
-          - Managed financial planning, sponsorships, overseeing expenditure of £25,000+ in club revenue.
+          - Managed financial planning and sponsorships, overseeing expenditure of £25,000+.
       - company: Surrey University Racing Team Engineering Solutions (SURTES)
         position: Lead Software Developer
         location: University of Surrey
@@ -129,8 +129,8 @@ cv:
         end_date: 2024-06
         highlights:
           - Built a zero-cost website using Nuxt.js, Nuxt Studio and GitHub Pages in 4 weeks.
-          - Mentored a team of students in Nuxt, Vue.js, Tailwind.css and Git.
-          - Consulted with various teams within SURTES to showcase their work.
+          - Mentored a team of students learning Nuxt, Vue.js, Tailwind.css and Git.
+          - Consulted with teams across SURTES.
           - 'Tools Used: GitHub Pages, GitHub Actions, Tailwind.css, Typescript, Nuxt, Vue.js'
     hobbies:
       - Software Development
