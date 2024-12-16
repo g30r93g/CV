@@ -1,0 +1,164 @@
+cv:
+  name: George Nick Gorzynski
+  location: London, United Kingdom
+  email: georgegorzynski@me.com
+  phone: tel:+44 7460 897522
+  social_networks:
+    - network: LinkedIn
+      username: g30r93g
+    - network: GitHub
+      username: g30r93g
+  sections:
+    education:
+      - institution: University of Surrey
+        area: Computer Science
+        degree: BSc
+        start_date: 2021-09
+        end_date: 2024-06
+        highlights:
+          - 'Grade: 67%, Upper Second Class Honours (2.1)'
+          - 'Modules: Privacy Enhancing Technologies, Project Management, Distributed Systems, Advanced Challenges in Web Technologies, Artificial Intelligence, Computer Security, Information Security Management, Computer Logic, Parallel Computing, Programming Fundamentals, Web and Database Systems'
+      # - institution: Woodhouse College
+      #   area: Computer Science, Mathematics, Physics
+      #   degree: A-Levels
+      #   start_date: 2018-09
+      #   end_date: 2020-06
+      #   highlights:
+      #     - 'Grades: A in Physics, B in Computer Science, B in Mathematics'
+      #     - 'Achievements: Maximum score for A-Level Computer Science coursework.'
+    experience:
+      - company: Kane FM
+        position: Software Developer
+        location: Remote
+        start_date: 2023-11
+        end_date: 2024-10
+        highlights:
+          - Created WordPress plugins for radio show programming and day-to-day station management.
+          - 'Tools Used: GitHub, GitHub Actions, Docker, Javascript, Node.js, PHP, Tailwind.css, WordPress'
+      - company: Surrey Students' Union
+        position: Digital Experience Assistant
+        location: Guildford, UK
+        start_date: 2022-02
+        end_date: 2024-02
+        highlights:
+          - Designed and released WordPress and Power Automate solutions to over 15,000 student members,
+            successfully increasing user engagement by up to 300%.
+          # - Successfully architected, wrote and launched a WordPress polling plugin in one week.
+          - Advocated and implemented DevOps practices such as Git, CI/CD pipelines,
+            code review and Agile methodology.
+          - Awarded "Best Part-Time Staff Award" from over 200 student staff
+            for performance.
+          - 'Tools Used: Azure, Azure DevOps, Docker, Microsoft Power Automate, Javascript, Node.js, PHP, WordPress'
+      - company: Surrey University Racing Team Engineering Solutions (SURTES)
+        position: Lead Software Developer
+        location: University of Surrey
+        start_date: 2023-09
+        end_date: 2024-06
+        highlights:
+          - Built a zero-cost website using Nuxt.js, Nuxt Studio and GitHub Pages in 4 weeks whilst mentoring a team of students learning Nuxt, Vue.js, Tailwind.css and Git.
+          - 'Tools Used: GitHub Pages, GitHub Actions, Tailwind.css, Typescript, Nuxt, Vue.js'
+      - company: University of Surrey
+        position: Student Software Developer
+        location: Guildford, UK
+        start_date: 2023-06
+        end_date: 2023-07
+        highlights:
+          - Integrated the University's learning management system with GitLab runners to
+            automate the marking of student coursework using static analysis and unit tests.
+          - 'Tools Used: Azure, Apache Airflow, Bash, GitLab, Python'
+      - company: Lumen Research Ltd
+        position: Internship
+        location: London, UK
+        start_date: 2022-06
+        end_date: 2022-08
+        highlights:
+          - Developed web scrapers to extract news articles from various outlets
+            in different regions to create templates for testing stimuli and tracking engagement over a 4 week period.
+          - 'Tools Used: Azure, Azure DevOps, Docker, Microsoft Power Automate, Javascript, Node.js, PHP, WordPress'
+    # projects:
+    #   - name: Tableside
+    #     date: '[github.com/Table-Side](https://github.com/Table-Side)'
+    #     highlights:
+    #       - A microservice application developed using Agile processes for a group coursework to provide restaurants with table ordering and kitchen order management.
+    #       - 'Tools Used: Apache APISIX, Azure, Docker, Express, Flutter for Web, GitHub Actions, Keycloak, Node.js, Typescript'
+    #   - name: Homebridge Panasonic
+    #     date: '[github.com/g30r93g/homebridge-panasonic](https://github.com/g30r93g/homebridge-panasonic)'
+    #     highlights:
+    #       - An open-source Homebridge plugin downloaded by 200 users to control Panasonic TVs in Apple Home.
+    #       - 'Tools Used: Homebridge, Hopppscotch, Javascript, mitmproxy, npm, Wireshark'
+    #   - name: Woodhouse Hub
+    #     date: '[github.com/g30r93g/Woodhouse-Hub](https://github.com/g30r93g/Woodhouse-Hub)'
+    #     highlights:
+    #       - An iOS app aggregating all software systems at my college through the use of a web scraper into a beautiful UI.
+    #       - 'Tools Used: Hopppscotch, HTML, Swift, SwiftSoup, UIKit, Wireshark, Xcode'
+    #   - name: TfL Planner
+    #     date: '[github.com/g30r93g/Tube-Planner](https://github.com/g30r93g/Tube-Planner)'
+    #     highlights:
+    #       - An iOS app for my A-Level coursework, implementing A* search and Dijkstra over the TfL network on a custom dataset to calculate multiple routes of different criteria.
+    #       - Reverse engineered the TfL Customer API to provide user journey history information and oyster card balance,
+    #         to further constrain routing algorithms.
+    #       - 'Tools Used: Hopppscotch, mitmproxy, Swift, UIKit, XCTest, Xcode'
+    volunteering:
+      - company: Team Surrey Karting Club
+        position: Vice President
+        location: University of Surrey
+        start_date: 2023-09
+        end_date: 2024-08
+        highlights:
+          - Organised social and competitive events engaging over 150 University of Surrey students in academic year 2023/24. 
+          - Implemented a cohesive club marketing strategy including branding and social media presence.
+          - Designed and delivered branded race suits for club members.
+          - Managed financial planning and sponsorships, overseeing an expenditure of £25,000+.
+          - Produced a software with Supabase and NextJS to manage club members, events and finances.
+      # - company: Surrey University Racing Team Engineering Solutions (SURTES)
+      #   position: Lead Software Developer
+      #   location: University of Surrey
+      #   start_date: 2023-09
+      #   end_date: 2024-06
+      #   highlights:
+      #     - Built a zero-cost website using Nuxt.js, Nuxt Studio and GitHub Pages in 4 weeks.
+      #     - Mentored a team of students learning Nuxt, Vue.js, Tailwind.css and Git.
+      #     - Consulted with teams across SURTES.
+      #     - 'Tools Used: GitHub Pages, GitHub Actions, Tailwind.css, Typescript, Nuxt, Vue.js'
+    # hobbies:
+    #   - Software Development
+    #   - Golf (Handicap 8, U14s Middlesex County Team Captain)
+    #   - Go Karting (British Universities Karting Championship 2024, 2025)
+design:
+  theme: sb2nov
+  font: Source Sans 3
+  font_size: 10pt
+  page_size: letterpaper
+  color: '#000'
+  disable_external_link_icons: false
+  disable_page_numbering: false
+  page_numbering_style: NAME - Page PAGE_NUMBER of TOTAL_PAGES
+  disable_last_updated_date: true
+  last_updated_date_style: Last updated in TODAY
+  header_font_size: 30 pt
+  text_alignment: justified
+  seperator_between_connections: ''
+  use_icons_for_connections: true
+  margins:
+    page:
+      top: 2 cm
+      bottom: 2 cm
+      left: 2 cm
+      right: 2 cm
+    section_title:
+      top: 0.3 cm
+      bottom: 0.2 cm
+    entry_area:
+      left_and_right: 0.2 cm
+      vertical_between: 0.2 cm
+      date_and_location_width: 8 cm
+      # education_degree_width: 1 cm
+    highlights_area:
+      top: 0.10 cm
+      left: 0.4 cm
+      vertical_between_bullet_points: 0.10 cm
+    header:
+      vertical_between_name_and_connections: 0.3 cm
+      bottom: 0.3 cm
+      horizontal_between_connections: 0.5 cm
+  # show_timespan_in: []

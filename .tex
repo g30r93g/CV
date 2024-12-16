@@ -1,0 +1,479 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=2 cm, % seperation between body and page edge from the top
+    bottom=2 cm, % seperation between body and page edge from the bottom
+    left=2 cm, % seperation between body and page edge from the left
+    right=2 cm, % seperation between body and page edge from the right
+    footskip=1.0 cm, % seperation between body and footer
+    % showframe % for debugging 
+]{geometry} % for adjusting page geometry
+\usepackage{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0, 0, 0} % define primary color
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath} % for math
+\usepackage[
+    pdftitle={George Nick Gorzynski's CV},
+    pdfauthor={George Nick Gorzynski},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref} % for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{bookmark} % for bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{ifthen} % for conditional statements
+\usepackage{needspace} % for avoiding page brake right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    % \usepackage[T1]{fontenc} % this breaks sb2nov
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage[default, type1]{sourcesanspro} 
+
+% Some settings:
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0cm} % set column seperation
+\makeatletter
+\let\ps@customFooterStyle\ps@plain % Copy the plain style to customFooterStyle
+\patchcmd{\ps@customFooterStyle}{\thepage}{
+    \color{gray}\textit{\small George Nick Gorzynski - Page \thepage{} of \pageref*{LastPage}}
+}{}{} % replace number by desired string
+\makeatother
+\pagestyle{customFooterStyle}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{
+    % left space:
+    -1pt
+}{
+    % top space:
+    0.3 cm
+}{
+    % bottom space:
+    0.2 cm
+} % section title spacing
+
+\renewcommand\labelitemi{$\circ$} % custom bullet points
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights for bullet entries
+
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0.2 cm + 0.00001 cm
+    }{
+        0.2 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+} % new environment for one column entries
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 8 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+} % new environment for the header
+
+\newcommand{\placelastupdatedtext}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
+  \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
+    \put(
+        \LenToUnit{\paperwidth-2 cm-0.2 cm+0.05cm},
+        \LenToUnit{\paperheight-1.0 cm}
+    ){\vtop{{\null}\makebox[0pt][c]{
+        \small\color{gray}\textit{Last updated in December 2024}\hspace{\widthof{Last updated in December 2024}}
+    }}}%
+  }%
+}%
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{}
+
+    \begin{header}
+        \textbf{\fontsize{30 pt}{30 pt}\selectfont George Nick Gorzynski}
+
+        \vspace{0.3 cm}
+
+        \normalsize
+        \mbox{{\color{black}\footnotesize\faMapMarker*}\hspace*{0.13cm}London, United Kingdom}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{mailto:georgegorzynski@me.com}{\color{black}{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}georgegorzynski@me.com}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{tel:+44-7460-897522}{\color{black}{\footnotesize\faPhone*}\hspace*{0.13cm}07460 897522}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://linkedin.com/in/g30r93g}{\color{black}{\footnotesize\faLinkedinIn}\hspace*{0.13cm}g30r93g}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://github.com/g30r93g}{\color{black}{\footnotesize\faGithub}\hspace*{0.13cm}g30r93g}}%
+    \end{header}
+
+    \vspace{0.3 cm - 0.3 cm}
+
+
+    \section{Education}
+
+
+
+        
+        \begin{twocolentry}{
+            
+            
+        \textit{Sept 2021 – June 2024}}
+            \textbf{University of Surrey}
+
+            \textit{BSc in Computer Science}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Grade: 67\%, Upper Second Class Honours (2.1)
+                \item Modules: Privacy Enhancing Technologies, Project Management, Distributed Systems, Advanced Challenges in Web Technologies, Artificial Intelligence, Computer Security, Information Security Management, Computer Logic, Parallel Computing, Programming Fundamentals, Web and Database Systems
+            \end{highlights}
+        \end{onecolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            
+            
+        \textit{Sept 2018 – June 2020}}
+            \textbf{Woodhouse College}
+
+            \textit{A-Levels in Computer Science, Mathematics, Physics}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Grades: A in Physics, B in Computer Science, B in Mathematics
+                \item Achievements: Maximum score for A-Level Computer Science coursework.
+            \end{highlights}
+        \end{onecolentry}
+
+
+
+    
+    \section{Experience}
+
+
+
+        
+        \begin{twocolentry}{
+        \textit{Remote \& Guildford, UK}    
+            
+        \textit{Nov 2023 – Nov 2024}}
+            \textbf{Software Developer}
+            
+            \textit{Kane FM}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Created WordPress plugins for radio show programming and day-to-day station management.
+                \item Leading meetings with various teams collecting requirements and discussing feedback on new features, plugins and platforms.
+                \item Tools Used: GitHub, GitHub Actions, Docker, Javascript, Node.js, PHP, Tailwind.css, WordPress
+            \end{highlights}
+        \end{onecolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+        \textit{Guildford, UK}    
+            
+        \textit{Feb 2022 – Feb 2024}}
+            \textbf{Digital Experience Assistant}
+            
+            \textit{Surrey Students' Union}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Designed and released WordPress and Power Automate solutions to over 15,000 student members, successfully increasing user engagement by up to 300\%.
+                \item Built an election candidate management WordPress plugin in 6 weeks to manage student sabbatical elections.
+                \item Advocated and implemented DevOps practices such as Git, CI/CD pipelines, code review and Agile methodology.
+                \item Awarded "Best Part-Time Staff Award" from over 200 student staff for individual performance and contributions.
+                \item Tools Used: Azure, Azure DevOps, Docker, Microsoft Power Automate, Javascript, Node.js, PHP, WordPress
+            \end{highlights}
+        \end{onecolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+        \textit{Guildford, UK}    
+            
+        \textit{June 2023 – July 2023}}
+            \textbf{Student Software Developer}
+            
+            \textit{University of Surrey}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Integrated the University's learning management system with GitLab runners to automate the marking of student coursework using static analysis and unit tests.
+                \item Tools Used: Azure, Apache Airflow, Bash, GitLab, Python
+            \end{highlights}
+        \end{onecolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+        \textit{London, UK}    
+            
+        \textit{June 2022 – Aug 2022}}
+            \textbf{Internship}
+            
+            \textit{Lumen Research Ltd}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Developed web scrapers to extract news articles from media outlets in different regions to create templates for testing stimuli and tracking engagement over a 4 week period.
+                \item Tools Used: Azure, Azure DevOps, Docker, Microsoft Power Automate, Javascript, Node.js, PHP, WordPress
+            \end{highlights}
+        \end{onecolentry}
+
+
+
+    
+    \section{Projects}
+
+
+
+        
+        \begin{twocolentry}{
+            
+            
+        \textit{\href{https://github.com/Table-Side}{github.com/Table-Side}}}
+            \textbf{Tableside}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Developed a microservice-based web application to allow restaurant customers to order food and drinks from their table.
+                \item Implemented a Node.js backend to handle orders, payments and notifications to the kitchen and bar staff.
+                \item Assisted in development of Flutter frontend to display menu, take orders and process payments.
+                \item Tools Used: Apache APISIX, Azure, Docker, Express, Flutter for Web, GitHub Actions, Keycloak, Node.js, Typescript
+            \end{highlights}
+        \end{onecolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            
+            
+        \textit{\href{https://github.com/g30r93g/homebridge-panasonic}{github.com/g30r93g/homebridge-panasonic}}}
+            \textbf{Homebridge Panasonic}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item An open-source Homebridge plugin downloaded by over 200 users to control Panasonic TVs in Apple Home.
+                \item Reverse engineered the Panasonic iOS application to obtain SOAP commands to set power, volume, channel and input source.
+                \item Tools Used: Homebridge, Hopppscotch, Javascript, mitmproxy, Wireshark
+            \end{highlights}
+        \end{onecolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            
+            
+        \textit{\href{https://github.com/g30r93g/Woodhouse-Hub}{github.com/g30r93g/Woodhouse-Hub}}}
+            \textbf{Woodhouse Hub}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Created an iOS app to centralise my 6th form college's timetable, grading, attendance, news and events system through the use of a web scraper.
+                \item Implemented local notifications for timetabled lessons.
+                \item Deliberately designed without the requirement of a server.
+                \item Tools Used: Hopppscotch, HTML, Swift, SwiftSoup, UIKit, Wireshark, Xcode
+            \end{highlights}
+        \end{onecolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            
+            
+        \textit{\href{https://github.com/g30r93g/Tube-Planner}{github.com/g30r93g/Tube-Planner}}}
+            \textbf{TfL Planner}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Built an iOS app to provide users with multiple routes between TfL tube and rail stations.
+                \item Created a dataset containing station information, line information, connections between stations, line transfer times and door side openings.
+                \item Implemented A* search and Dijkstra's algorithm with custom heuristics to calculate fastest, cheapest and fewest interchange routes, entirely offline.
+                \item Reverse engineered TfL Customer API to provide user journey history information and oyster card balance, which was factored into route planning.
+                \item Displayed step-by-step routing instructions on a tube map.
+                \item Tools Used: Hopppscotch, mitmproxy, Swift, UIKit, XCTest, Xcode
+            \end{highlights}
+        \end{onecolentry}
+
+
+
+    
+    \section{Volunteering}
+
+
+
+        
+        \begin{twocolentry}{
+        \textit{University of Surrey}    
+            
+        \textit{Sept 2023 – Aug 2024}}
+            \textbf{Vice President}
+            
+            \textit{Team Surrey Karting Club}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Organised and coordinated events for up to 32 students.
+                \item Engaged over 150 students at the University of Surrey over the 2023/24 academic year.
+                \item Established club branding and engaging social media presence.
+                \item Designed and delivered new custom race suits for club members.
+                \item Managed financial planning and sponsorships, overseeing expenditure of £25,000+.
+                \item Produced a software management system in NextJS to manage and track club members, events and finances.
+                \item Tools Used: Interpersonal, Critical Thinking, Marketing, Strategic Planning, NextJS
+            \end{highlights}
+        \end{onecolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+        \textit{University of Surrey}    
+            
+        \textit{Sept 2023 – June 2024}}
+            \textbf{Lead Software Developer}
+            
+            \textit{Surrey University Racing Team Engineering Solutions (SURTES)}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Built a zero-cost website using Nuxt.js, Nuxt Studio and GitHub Pages in 4 weeks whilst mentoring a team of students learning Nuxt, Vue.js, Tailwind.css and Git.
+                \item Consulted with teams across SURTES.
+                \item Tools Used: GitHub Pages, GitHub Actions, Tailwind.css, Typescript, Nuxt, Vue.js
+            \end{highlights}
+        \end{onecolentry}
+
+
+
+    
+    \section{Hobbies}
+
+
+
+        
+        \begin{onecolentry}
+            Software Development
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            Golf (Handicap 8, U14s Middlesex County Team Captain)
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+            Go Karting (British Universities Karting Championship 2024, 2025)
+        \end{onecolentry}
+
+
+    
+
+\end{document}
