@@ -24,7 +24,9 @@ jobs:
       - name: RenderCV
         run: |
           # Find all files ending with 'CV.yaml' in the src dir
-          cv_files=$(find ./src  -maxdepth 1 -type f -name "*_CV.yaml")
+          cd src
+          cv_files=$(find .  -maxdepth 1 -type f -name "*_CV.yaml")
+          cd ..
 
           # If no files found, abort
           if [ -z "$cv_files" ]; then
@@ -36,7 +38,7 @@ jobs:
           for file in $cv_files; do
               echo "––––––––––––––––––"
               echo "Rendering $file..."
-              rendercv render $file --pdf-path "${file%.yaml}.pdf" --markdown-path "README.md" --latex-path "${file%.yaml}.tex"
+              rendercv render "./src/$file" -nohtml -nopng --output-folder-name "./rendercv_output/${file%_CV.yaml}"
           done
       - name: Upload rendercv_output as an artifact
         uses: actions/upload-artifact@v4
