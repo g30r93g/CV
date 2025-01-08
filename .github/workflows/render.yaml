@@ -23,14 +23,21 @@ jobs:
           pip install -r requirements.txt
       - name: RenderCV
         run: |
-          cd src
-          cv_file=$(find .  -maxdepth 1 -type f -name "*_CV.yaml" | head -n 1)
+          # Find all files ending with 'CV.yaml' in the src dir
+          cv_file=$(find ./src  -maxdepth 1 -type f -name "*_CV.yaml")
+
+          # If no files found, abort
           if [ -z "$cv_file" ]; then
-            echo "No RenderCV file found!"
-            exit 1
+              echo "No RenderCV file found!"
+              exit 1
           fi
-          cd ..
-          rendercv render src/$cv_file --pdf-path ${cv_file%.yaml}.pdf --markdown-path README_${cv_file%.yaml}.md --latex-path ${cv_file%.yaml}.tex
+
+          # Render each found file
+          for file in $cv_file; do
+              echo "––––––––––––––––––"
+              echo "Rendering $file..."
+              rendercv render "$file"
+          done
       - name: Upload rendercv_output as an artifact
         uses: actions/upload-artifact@v4
         with:
