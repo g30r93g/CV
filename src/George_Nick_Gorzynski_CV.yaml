@@ -1,14 +1,21 @@
 cv:
   name: George Nick Gorzynski
-  location: London, United Kingdom
+  location: 6 Tregenna Close, London, N14 4RD, United Kingdom
   email: georgegorzynski@me.com
   phone: tel:+44 7460 897522
-  social_networks:
-    - network: LinkedIn
-      username: g30r93g
-    - network: GitHub
-      username: g30r93g
+  website: https://g30r93g.dev
+  # social_networks:
+  #   - network: LinkedIn
+  #     username: g30r93g
+  #   - network: GitHub
+  #     username: g30r93g
   sections:
+    summary:
+      - "Recent graduate from the University of Surrey in Computer Science with a passion for creating solutions to interesting real-world problems seeking a position for Backend Engineer III.
+      Experienced in building web and native iOS applications in a variety of languages and frameworks, automation tools and solutions. 
+      Capable of independently designing and deploying user-focused digital experiences and being a technical lead within a project.
+      Enthusiastic about learning new and existing technologies.
+      Personality-wise, I am attentive, resilient, flexible to business needs and importantly, impossible to offend."
     education:
       - institution: University of Surrey
         area: Computer Science
@@ -27,15 +34,23 @@ cv:
           - 'Grades: A in Physics, B in Computer Science, B in Mathematics'
           - 'Achievements: Maximum score for A-Level Computer Science coursework.'
     experience:
-      - company: Kane FM
-        position: Software Developer
-        location: Remote & Guildford, UK
-        start_date: 2023-11
-        end_date: 2024-11
+      - company: Outlier.ai
+        position: Tier 3 (Expert) Python - RLHF AI Trainer
+        location: Remote
+        start_date: 2024-12
+        end_date: "present"
         highlights:
-          - Created WordPress plugins for radio show programming and day-to-day station management.
-          - Leading meetings with various teams collecting requirements and discussing feedback on new features, plugins and platforms.
-          - 'Tools Used: GitHub, GitHub Actions, Docker, Javascript, Node.js, PHP, Tailwind.css, WordPress'
+          - Worked on multiple reinforcement learning projects to evaluate the Python code output quality from various LLMs.
+          - 'Tools Used: Python, LLMs, RLHF'
+      # - company: Kane FM
+      #   position: Software Developer
+      #   location: Remote
+      #   start_date: 2023-11
+      #   end_date: 2024-11
+      #   highlights:
+      #     - Created WordPress plugins for radio show programming and day-to-day station management.
+      #     - Leading meetings with various teams collecting requirements and discussing feedback on new features, plugins and platforms.
+      #     - 'Tools Used: GitHub, GitHub Actions, Docker, Javascript, Node.js, PHP, Tailwind.css, WordPress'
       - company: Surrey Students' Union
         position: Digital Experience Assistant
         location: Guildford, UK
@@ -48,6 +63,7 @@ cv:
             elections.
           - Advocated and implemented DevOps practices such as Git, CI/CD pipelines,
             code review and Agile methodology.
+          - Created numerous internal tools to manage areas such as advertising and elections.
           - Awarded "Best Part-Time Staff Award" from over 200 student staff
             for individual performance and contributions.
           - 'Tools Used: Azure, Azure DevOps, Docker, Microsoft Power Automate, Javascript, Node.js, PHP, WordPress'
@@ -68,7 +84,7 @@ cv:
         highlights:
           - Developed web scrapers to extract news articles from media outlets
             in different regions to create templates for testing stimuli and tracking engagement over a 4 week period.
-          - 'Tools Used: Azure, Azure DevOps, Docker, Microsoft Power Automate, Javascript, Node.js, PHP, WordPress'
+          - 'Tools Used: GitHub, AWS Lambda, Node.js, Typescript, Chrome Browser Tools'
     projects:
       - name: Tableside
         date: '[github.com/Table-Side](https://github.com/Table-Side)'
@@ -78,14 +94,14 @@ cv:
           - Implemented a Node.js backend to handle orders, payments and notifications
             to the kitchen and bar staff.
           - Assisted in development of Flutter frontend to display menu, take orders and process payments.
-          - 'Tools Used: Apache APISIX, Azure, Docker, Express, Flutter for Web, GitHub Actions, Keycloak, Node.js, Typescript'
+          - 'Tools Used: Apache APISIX, Azure, Docker, Express, Flutter for Web, GitHub, GitHub Actions, Keycloak, Node.js, Typescript'
       - name: Homebridge Panasonic
         date: '[github.com/g30r93g/homebridge-panasonic](https://github.com/g30r93g/homebridge-panasonic)'
         highlights:
-          - An open-source Homebridge plugin downloaded by over 200 users to control Panasonic TVs in Apple Home.
+          - An open source Homebridge plugin downloaded by over 200 users to control Panasonic TVs in Apple Home.
           - Reverse engineered the Panasonic iOS application to obtain SOAP commands
             to set power, volume, channel and input source.
-          - 'Tools Used: Homebridge, Hopppscotch, Javascript, mitmproxy, Wireshark'
+          - 'Tools Used: GitHub, npm, Homebridge, Hopppscotch, Javascript, mitmproxy, Wireshark'
       - name: Woodhouse Hub
         date: '[github.com/g30r93g/Woodhouse-Hub](https://github.com/g30r93g/Woodhouse-Hub)'
         highlights:
@@ -93,7 +109,7 @@ cv:
             through the use of a web scraper.
           - Implemented local notifications for timetabled lessons.
           - Deliberately designed without the requirement of a server.
-          - 'Tools Used: Hopppscotch, HTML, Swift, SwiftSoup, UIKit, Wireshark, Xcode'
+          - 'Tools Used: GitHub, Hopppscotch, HTML, Swift, SwiftSoup, UIKit, Wireshark, Xcode'
       - name: TfL Planner
         date: '[github.com/g30r93g/Tube-Planner](https://github.com/g30r93g/Tube-Planner)'
         highlights:
@@ -105,7 +121,7 @@ cv:
           - Reverse engineered TfL Customer API to provide user journey history information and oyster card balance,
             which was factored into route planning.
           - Displayed step-by-step routing instructions on a tube map.
-          - 'Tools Used: Hopppscotch, mitmproxy, Swift, UIKit, XCTest, Xcode'
+          - 'Tools Used: GitHub, Hopppscotch, mitmproxy, Swift, UIKit, XCTest, Xcode'
     volunteering:
       - company: Team Surrey Karting Club
         position: Vice President
@@ -119,18 +135,18 @@ cv:
           - Designed and delivered new custom race suits for club members.
           - Managed financial planning and sponsorships, overseeing expenditure of £25,000+.
           - Produced a software management system in NextJS to manage and track club members, events and finances.
-          - 'Tools Used: Interpersonal, Critical Thinking, Marketing, Strategic Planning, NextJS'
-      - company: Surrey University Racing Team Engineering Solutions (SURTES)
+          - 'Tools Used: Interpersonal, Critical Thinking, Marketing, Strategic Planning, GitHub, NextJS'
+      - company: Surrey University Racing Team Engineering Solutions
         position: Lead Software Developer
         location: University of Surrey
         start_date: 2023-09
         end_date: 2024-06
         highlights:
           - Built a zero-cost website using Nuxt.js, Nuxt Studio and GitHub Pages in 4 weeks whilst mentoring a team of students learning Nuxt, Vue.js, Tailwind.css and Git.
-          - Consulted with teams across SURTES.
-          - 'Tools Used: GitHub Pages, GitHub Actions, Tailwind.css, Typescript, Nuxt, Vue.js'
+          - Assigned as project manager and technical leader for website development.
+          - Consulted with teams across SURTES. 
+          - 'Tools Used: GitHub, GitHub Pages, GitHub Actions, Tailwind.css, Typescript, Nuxt, Vue.js'
     hobbies:
-      - Software Development
       - Golf (Handicap 8, U14s Middlesex County Team Captain)
       - Go Karting (British Universities Karting Championship 2024, 2025)
 design:
@@ -139,18 +155,24 @@ design:
     size: a4
     top_margin: 2cm
     bottom_margin: 2cm
-    left_margin: 2cm
-    right_margin: 2cm
+    left_margin: 1.5cm
+    right_margin: 1.5cm
+    show_last_updated_date: false
   colors:
     text: black
     links: '#123047'
+  section_titles:
+    font_family: Open Sans
+  header:
+    name_font_family: Open Sans
+    connections_font_family: Source Sans 3
   text:
     font_family: Source Sans 3
     font_size: 10pt
     leading: 0.6em
     date_and_location_column_alignment: right
   links:
-    underline: false
+    underline: true
     use_external_link_icon: true
   entries:
     date_and_location_width: 8cm

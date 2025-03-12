@@ -27,21 +27,21 @@ cv:
       #     - 'Grades: A in Physics, B in Computer Science, B in Mathematics'
       #     - 'Achievements: Maximum score for A-Level Computer Science coursework.'
     experience:
-      - company: Kane FM
-        position: Software Developer
+      - company: Outlier.ai
+        position: Tier 3 (Expert) Python - Human Reinforcement Learning AI Trainer
         location: Remote
-        start_date: 2023-11
-        end_date: 2024-10
+        start_date: 2024-12
+        end_date: "Present"
         highlights:
           - Created WordPress plugins for radio show programming and day-to-day station management.
-          - 'Tools Used: GitHub, GitHub Actions, Docker, Javascript, Node.js, PHP, Tailwind.css, WordPress'
+          - 'Tools Used: Python, LLM, RLHF'
       - company: Surrey Students' Union
         position: Digital Experience Assistant
         location: Guildford, UK
         start_date: 2022-02
         end_date: 2024-02
         highlights:
-          - Designed and released WordPress and Power Automate solutions to over 15,000 student members,
+          - Designed, owned and released WordPress and Power Automate solutions to over 15,000 student members,
             successfully increasing user engagement by up to 300%.
           # - Successfully architected, wrote and launched a WordPress polling plugin in one week.
           - Advocated and implemented DevOps practices such as Git, CI/CD pipelines,
@@ -75,29 +75,29 @@ cv:
           - Developed web scrapers to extract news articles from various outlets
             in different regions to create templates for testing stimuli and tracking engagement over a 4 week period.
           - 'Tools Used: Azure, Azure DevOps, Docker, Microsoft Power Automate, Javascript, Node.js, PHP, WordPress'
-    # projects:
-    #   - name: Tableside
-    #     date: '[github.com/Table-Side](https://github.com/Table-Side)'
-    #     highlights:
-    #       - A microservice application developed using Agile processes for a group coursework to provide restaurants with table ordering and kitchen order management.
-    #       - 'Tools Used: Apache APISIX, Azure, Docker, Express, Flutter for Web, GitHub Actions, Keycloak, Node.js, Typescript'
-    #   - name: Homebridge Panasonic
-    #     date: '[github.com/g30r93g/homebridge-panasonic](https://github.com/g30r93g/homebridge-panasonic)'
-    #     highlights:
-    #       - An open-source Homebridge plugin downloaded by 200 users to control Panasonic TVs in Apple Home.
-    #       - 'Tools Used: Homebridge, Hopppscotch, Javascript, mitmproxy, npm, Wireshark'
-    #   - name: Woodhouse Hub
-    #     date: '[github.com/g30r93g/Woodhouse-Hub](https://github.com/g30r93g/Woodhouse-Hub)'
-    #     highlights:
-    #       - An iOS app aggregating all software systems at my college through the use of a web scraper into a beautiful UI.
-    #       - 'Tools Used: Hopppscotch, HTML, Swift, SwiftSoup, UIKit, Wireshark, Xcode'
+    projects:
+      - name: Tableside
+        date: '[github.com/Table-Side](https://github.com/Table-Side)'
+        highlights:
+          - A microservice application developed using Agile processes for a group coursework to provide a restaurant order management system.
+          - 'Tools Used: Apache APISIX, Azure, Docker, Express, Flutter for Web, GitHub Actions, Keycloak, Node.js, Typescript'
+      - name: Homebridge Panasonic
+        date: '[github.com/g30r93g/homebridge-panasonic](https://github.com/g30r93g/homebridge-panasonic)'
+        highlights:
+          - An open-source Homebridge plugin downloaded by 200 users to control Panasonic TVs in Apple Home.
+          - 'Tools Used: Homebridge, Hopppscotch, Javascript, mitmproxy, npm, Wireshark'
+      - name: Woodhouse Hub
+        date: '[github.com/g30r93g/Woodhouse-Hub](https://github.com/g30r93g/Woodhouse-Hub)'
+        highlights:
+          - An iOS app aggregating all software systems at my college through the use of a web scraper into a single UI.
+          - 'Tools Used: Hopppscotch, HTML, Swift, SwiftSoup, UIKit, Wireshark, Xcode'
     #   - name: TfL Planner
     #     date: '[github.com/g30r93g/Tube-Planner](https://github.com/g30r93g/Tube-Planner)'
     #     highlights:
     #       - An iOS app for my A-Level coursework, implementing A* search and Dijkstra over the TfL network on a custom dataset to calculate multiple routes of different criteria.
     #       - Reverse engineered the TfL Customer API to provide user journey history information and oyster card balance,
     #         to further constrain routing algorithms.
-    #       - 'Tools Used: Hopppscotch, mitmproxy, Swift, UIKit, XCTest, Xcode'
+    #       - 'Tools Used: Swift, UIKit, XCTest, Xcode'
     volunteering:
       - company: Team Surrey Karting Club
         position: Vice President
